@@ -1,70 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:id="@+id/main"
     android:orientation="vertical">
 
     <ImageView
-        android:src="@drawable/obesity_3217137_1280"
-        android:layout_width="100dp"
-        android:layout_height="100dp" />
+        android:layout_width="262dp"
+        android:layout_height="179dp"
+        android:layout_margin="50dp"
+        android:src="@drawable/obesity_3217137_1280" />
 
     <TextView
+        android:id="@+id/text_view_bmicalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:text="BMI Calculator" />
 
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_button_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:padding="15dp"/>
+
+        <RadioButton
+            android:id="@+id/radio_button_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:padding="15dp"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edit_text_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Age"
+        android:inputType="number"/>
+
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
 
-        <RadioButton
+        <EditText
+            android:id="@+id/edit_text_feet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Male" />
+            android:hint="Feet"
+            android:inputType="number"/>
 
-        <RadioButton
+        <EditText
+            android:id="@+id/edit_text_inches"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Female" />
+            android:hint="Inches"
+            android:inputType="number"/>
     </LinearLayout>
 
     <EditText
+        android:id="@+id/edit_text_weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Age" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Feet" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Inches" />
-    </LinearLayout>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Weight" />
+        android:layout_margin="10dp"
+        android:hint="Weight"
+        android:inputType="number"/>
 
     <Button
+        android:id="@+id/button_calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:text="Calculate" />
 
     <TextView
+        android:id="@+id/text_view_foot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:text="26.3 - You are Healthy weight" />
 
 </LinearLayout>
