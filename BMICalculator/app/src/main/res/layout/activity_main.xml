@@ -69,6 +69,7 @@
             android:inputType="number"/>
     </LinearLayout>
 
+
     <EditText
         android:id="@+id/edit_text_weight"
         android:layout_width="wrap_content"
