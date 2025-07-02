@@ -14,6 +14,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     Button calculateButton;
@@ -58,32 +60,51 @@ public class MainActivity extends AppCompatActivity {
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Toast.makeText(MainActivity.this, "Button clicked succesfully!!!",Toast.LENGTH_LONG).show();
-                calculateBmi();
+                double bmiVal = calculateBmi();
+                showBmi(bmiVal);
             }
         });
     }
 
-    private void calculateBmi() {
+    private void showBmi(double bmiVal) {
         String ageText= ageEdit.getText().toString();
+        int age = Integer.parseInt(ageText);
+        String finalText="";
+        if (age > 18 ){
+            if (bmiVal < 18){
+                finalText = bmiVal + " You are under weight.";
+            } else if (bmiVal > 25) {
+                finalText = bmiVal + " You are over weight.";
+            } else {
+                finalText = bmiVal + " You are healthy weight";
+            } }
+        else {
+            if(maleText.isChecked()) {
+                finalText = "You are under age, so please check with Male doctor";
+            } else if (femaleText.isChecked()) {
+                finalText = "You are under age, so please check with Female doctor";
+            }
+        }
+
+        resultText.setText(finalText);
+    }
+
+    private double calculateBmi() {
+        String weightText= weightEdit.getText().toString();
         String feetText= feetEdit.getText().toString();
         String inchesText= inchesEdit.getText().toString();
-        String weighttext= weightEdit.getText().toString();
 
-        Integer age = Integer.parseInt(ageText);
-        Integer feet = Integer.parseInt(feetText);
-        Integer inches = Integer.parseInt(inchesText);
-        Integer weight = Integer.parseInt(weighttext);
+        int weight = Integer.parseInt(weightText);
+        int feet = Integer.parseInt(feetText);
+        int inches = Integer.parseInt(inchesText);
 
-        Integer feetInInches = feet*12;
+        int feetInInches = (feet*12) + inches;
         double heightInMeters = feetInInches * 0.0254;
 
         double bmi = weight / (heightInMeters*heightInMeters);
 
-        String bmistr = String.valueOf(bmi);
-        resultText.setText(bmistr);
-
-
+        DecimalFormat deciFor = new DecimalFormat("0.00");
+        return Double.parseDouble(deciFor.format(bmi));
     }
 
 

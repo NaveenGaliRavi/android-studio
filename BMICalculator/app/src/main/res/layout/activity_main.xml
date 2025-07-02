@@ -75,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Weight"
+        android:hint="Weight (kg)"
         android:inputType="number"/>
 
     <Button
@@ -89,7 +89,6 @@
         android:id="@+id/text_view_foot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="26.3 - You are Healthy weight" />
+        android:layout_margin="10dp"/>
 
 </LinearLayout>
