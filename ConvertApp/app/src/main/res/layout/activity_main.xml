@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="483dp"
+        android:layout_height="356dp"
+        android:src="@drawable/tape" />
+
+    <EditText
+        android:id="@+id/editInches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_margin="30dp"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:hint="@string/enter_inches"/>
+
+    <TextView
+        android:id="@+id/textinches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:textSize="35sp"
+        android:textAlignment="center"
+        android:text="@string/inches_to_meters"/>
+
+    <Button
+        android:id="@+id/buttonConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="@string/convert"/>
+
+
+
+</LinearLayout>
