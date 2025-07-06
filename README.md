@@ -1,1 +1,6 @@
-
+- Activity_main.xml
+  - id, height and width, orientation, text, textAlignment
+  - EditText, TextView, RadioButton, Button
+  - LinearLayout
+- MainActivity.java
+  - findViewById, onClick Event listner, Toast, get/set Text.
