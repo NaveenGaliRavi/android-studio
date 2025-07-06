@@ -4,3 +4,4 @@
   - LinearLayout
 - MainActivity.java
   - findViewById, onClick Event listner, Toast, get/set Text.
+  - Activities inProgress
